@@ -18,6 +18,7 @@ div{
     visibility: hidden;
     display: none;
     background-color: beige;
+    /* background-color: rgba(0, 0, 0, 0.519); */
     white-space: pre-wrap;
     direction: rtl;
     padding: 1em;
@@ -50,7 +51,6 @@ div{
     box-shadow: 2px -2px 0px brown;
     position: sticky;
     top: 4em;
-
 }
 
 .title:hover{
@@ -72,7 +72,7 @@ div{
     display:flex;
     gap:10px;
     flex-wrap: wrap;
-    position: sticky;
+    position: relative;
     top:3.5em
 }
 
