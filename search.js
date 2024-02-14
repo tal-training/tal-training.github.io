@@ -12,7 +12,8 @@ function showSearch(data){
     // let sections=data.map(i=>{filename:i.filename.split('-')[0].split('.')[0]})
     let s=document.getElementById("search")
     s.oninput=(e)=>{
-        Array.from(document.getElementsByClassName("item")).map(i=>i.children[0].innerHTML.toLowerCase().includes(e.target.value.toLowerCase())||i.children[1].innerHTML.toLowerCase().includes(e.target.value.toLowerCase())?i.children[0].style.color="orange":i.children[0].style.color="white")
+        Array.from(document.getElementsByClassName("item")).map(i=>i.children[0].innerHTML.toLowerCase().includes(e.target.value.toLowerCase())||i.children[1].innerHTML.toLowerCase().includes(e.target.value.toLowerCase())?i.children`[0].style.color="orange":i.children[0].style.color="white");
+        ping(e.target.value)
     }
     
     document.getElementById("sections").innerHTML=data.map(i=>`<div class="item"><div class="title" >${i.filename.replace("-images", "")}</div><div class="content" >
