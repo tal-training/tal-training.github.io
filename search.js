@@ -2,7 +2,7 @@ import 'https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js'
 
 axios.get('big-json.json').then(response=>showSearch(response.data))
 
-let SERVER_ADDRESS="http://tmanor.pythonanywhere.com/ping?section"
+let SERVER_ADDRESS="https://tmanor.pythonanywhere.com/ping?section"
 
 function ping(section){
     axios.get(`${SERVER_ADDRESS}=${section}`)
