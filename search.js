@@ -2,14 +2,10 @@ import 'https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js'
 
 axios.get('big-json.json').then(response=>showSearch(response.data))
 
-async function recommend(data){
-    let words=data.map(i=>i.content).join('\n').split(' ')
-    let freq=[...new Set(words.map(ii=>JSON.stringify([ii,words.reduce((t,i)=>i==ii?t+=1:t,0)])))]
-//    let cf=freq.filter(x=>!(x in freq))
-    //let max=Math.max(...freq.map(i=>i[1]))
-    //let avg=freq.reduce((t,i, ix)=>ix<freq.length-1?t+=JSON.parse(i)[1]:(t/freq.length), 0)
-    return freq.filter(i=>1<JSON.parse(i)[1] && JSON.parse(i)[1]<4)
-    //return avg
+let SERVER_ADDRESS="http://tmanor.pythonanywhere.com/ping?section"
+
+function ping(section){
+    axios.get(`${SERVER_ADDRESS}=${section}`)
 }
 
 function showSearch(data){
@@ -26,6 +22,6 @@ function showSearch(data){
 
     Array.from(document.getElementsByClassName("item")).forEach(i=>i.addEventListener("click", (e)=>{
         e.target.parentElement.children[1].classList.toggle("visible")
+        ping(e.target.innerHTML)
     }))
-    recommend(data).then(r=>console.log(r))
  }
