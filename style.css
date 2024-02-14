@@ -48,6 +48,9 @@ div{
     padding: 3px;
     border-radius: 5px;
     box-shadow: 2px -2px 0px brown;
+    position: sticky;
+    top: 4em;
+
 }
 
 .title:hover{
@@ -69,7 +72,7 @@ div{
     display:flex;
     gap:10px;
     flex-wrap: wrap;
-    position: relative;
+    position: sticky;
     top:3.5em
 }
 
