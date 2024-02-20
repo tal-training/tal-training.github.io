@@ -1,0 +1,13 @@
+textarea{
+    height: 10rem;
+    width: 10rem;
+    background-color: rgb(246, 246, 112);
+    font-weight: bold;
+}
+
+.main{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    height: 100vh;
+}
