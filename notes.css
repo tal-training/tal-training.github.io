@@ -3,6 +3,7 @@ textarea{
     width: 10rem;
     background-color: rgb(246, 246, 112);
     font-weight: bold;
+    box-shadow: 1px 1px 1px black;
 }
 
 .main{
