@@ -16,7 +16,8 @@ function Note(p) {
     }
     const [text, setText] = React.useState(p.text)
     const [index, setIndex] = React.useState(p.index)
-    return <textarea onChange={(e) => {
+    const [color, setColor] = React.useState(p.color || ["pink", "yellow", "skyblue"][index%3])
+    return <textarea style={{backgroundColor:color}} onChange={(e) => {
         setText(e.target.value)
         save()
     }
